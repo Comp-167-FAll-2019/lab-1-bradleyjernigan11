@@ -10,10 +10,10 @@ package contacts;
  * @author CCannon
  */
 public class Contact {
-    private String firstName;
-    private String lastName;
-    private String phoneNumber;
-    private String emailAddress;
+    private final String firstName;
+    private final String lastName;
+    private final String phoneNumber;
+    private final String emailAddress;
 
     public Contact(String firstName, String lastName, String phoneNumber, String emailAddress) {
         this.firstName = firstName;
@@ -22,7 +22,17 @@ public class Contact {
         this.emailAddress = emailAddress;
     }
     
-    public String toString(){
-        return firstName + " " + lastName  " " + phoneNumber + " " + emailAddress;
+    public String getFirstName(){
+        return firstName;
     }
+    
+    public String getLastName(){
+        return lastName;
+    }
+    
+    public String toString(){
+        return firstName + " " + lastName +  " " + phoneNumber + " " + emailAddress;
+    }
+  
+    
 }
